@@ -101,43 +101,69 @@
         padding: 1rem 0;
       }
 
-      .timer {
+      .timer1 {
         flex: 1;
-        font-size: 4.5vw;
+        font-size: 7.5vw;
         border-radius: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
         transition: all 0.3s ease;
         background: rgba(255, 255, 255, 0.05);
         border: 2px solid rgba(255, 255, 255, 0.1);
         position: relative;
         overflow: hidden;
       }
+      .timer2 {
+        flex: 1;
+        font-size: 7.5vw;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: #000000;
+        transition: all 0.3s ease;
+        background: rgb(209, 206, 206);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
 
-      .timer.active {
+      .timer1.active {
         background: linear-gradient(
           135deg,
           rgba(255, 255, 255, 0.15),
           rgba(255, 255, 255, 0.05)
         );
         border-color: #fff;
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.811);
+      }
+      .timer2.active {
+        background: linear-gradient(
+          135deg,
+          rgba(237, 230, 230, 0.896),
+          rgba(225, 221, 221, 0.905)
+        );
+        border-color: #000000;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.811);
       }
 
       .player-name {
-        font-size: 1.5vw;
+        /* font-size: 4.5vw; */
         margin-bottom: 1rem;
         font-weight: 500;
-        color: rgba(255, 255, 255, 0.8);
+        /* color: rgba(255, 255, 255, 0.8); */
       }
 
       .controls {
-        position: fixed;
-        bottom: 2rem;
-        display: flex;
+        /* position: fixed; */
+        /* bottom: 2rem; */
+        /* display: flex; */
         gap: 1rem;
       }
 
@@ -166,12 +192,15 @@
           padding: 1.5rem;
         }
 
-        .timer {
+        .timer1 {
+          font-size: 12vw;
+        }
+        .timer2 {
           font-size: 12vw;
         }
 
         .player-name {
-          font-size: 5vw;
+          font-size: 10vw;
         }
 
         .input-row {
@@ -180,7 +209,10 @@
       }
 
       @media (min-width: 1200px) {
-        .timer {
+        .timer1 {
+          font-size: 3.5rem;
+        }
+        .timer2 {
           font-size: 3.5rem;
         }
       }
@@ -224,11 +256,11 @@
     <!-- Game Page -->
     <div class="page" id="gamePage" style="display: none">
       <div class="timer-container">
-        <div class="timer" id="player1Timer" onclick="handleTimerClick(this)">
+        <div class="timer2" id="player1Timer" onclick="handleTimerClick(this)">
           <div class="player-name" id="player1NameDisplay"></div>
           <div id="time1">00:00</div>
         </div>
-        <div class="timer" id="player2Timer" onclick="handleTimerClick(this)">
+        <div class="timer1" id="player2Timer" onclick="handleTimerClick(this)">
           <div class="player-name" id="player2NameDisplay"></div>
           <div id="time2">00:00</div>
         </div>
